@@ -35,7 +35,7 @@ import com.github.pedrovgs.effectiveandroidui.util.ToastUtils;
 import com.squareup.picasso.Picasso;
 import javax.inject.Inject;
 
-import butterknife.BindView;
+import butterknife.InjectView;
 
 /**
  * Fragment created to show a TvShows using DraggablePanel library.
@@ -57,10 +57,10 @@ public class TvShowDraggableFragment extends BaseFragment implements TvShowPrese
 
   private boolean useSaveInstanceState = true;
 
-  @BindView(R.id.draggable_view) DraggableView draggable_view;
-  @BindView(R.id.iv_fan_art) ImageView iv_fan_art;
-  @BindView(R.id.lv_chapters) ListView lv_chapters;
-  @BindView(R.id.pb_loading) ProgressBar pb_loading;
+  @InjectView(R.id.draggable_view) DraggableView draggable_view;
+  @InjectView(R.id.iv_fan_art) ImageView iv_fan_art;
+  @InjectView(R.id.lv_chapters) ListView lv_chapters;
+  @InjectView(R.id.pb_loading) ProgressBar pb_loading;
 
   private TextView header_tv_show_chapters;
 
@@ -173,7 +173,7 @@ public class TvShowDraggableFragment extends BaseFragment implements TvShowPrese
     draggable_view.post(new Runnable() {
       @Override
       public void run() {
-        draggable_view.closeToRight();
+//        draggable_view.closeToRight();
       }
     });
     draggable_view.setDraggableListener(new DraggableListener() {

@@ -24,7 +24,7 @@ import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import butterknife.BindView;
+import butterknife.InjectView;
 import butterknife.OnClick;
 import com.github.pedrovgs.effectiveandroidui.R;
 import com.github.pedrovgs.effectiveandroidui.ui.renderer.chapterviewmodel.ChapterViewModelCollection;
@@ -60,10 +60,10 @@ import javax.inject.Inject;
   private ChapterViewModelRendererAdapter adapter;
   private ChapterViewModelCollection chapterAdapteeCollection = new ChapterViewModelCollection();
 
-  @BindView(R.id.iv_fan_art) ImageView iv_fan_art;
-  @BindView(R.id.lv_chapters) ListView lv_chapters;
-  @BindView(R.id.pb_loading) ProgressBar pb_loading;
-  @BindView(R.id.v_empty_case) View v_empty_case;
+  @InjectView(R.id.iv_fan_art) ImageView iv_fan_art;
+  @InjectView(R.id.lv_chapters) ListView lv_chapters;
+  @InjectView(R.id.pb_loading) ProgressBar pb_loading;
+  @InjectView(R.id.v_empty_case) View v_empty_case;
 
   private TextView header_tv_show_chapters;
 

@@ -79,6 +79,6 @@ public abstract class BaseActivity extends AppCompatActivity {
    * value.
    */
   private void injectViews() {
-    ButterKnife.bind(this);
+    ButterKnife.inject(this);
   }
 }

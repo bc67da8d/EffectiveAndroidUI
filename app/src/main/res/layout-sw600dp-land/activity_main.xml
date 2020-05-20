@@ -14,7 +14,6 @@
       android:layout_width="match_parent"
       android:layout_height="match_parent"
       android:layout_weight="1"
-      android:layout_marginRight="@dimen/secondary_margin"
       class="com.github.pedrovgs.effectiveandroidui.ui.fragment.TvShowCatalogFragment"
       tools:context="com.github.pedrovgs.effectiveandroidui.ui.activity.MainActivity"/>
 

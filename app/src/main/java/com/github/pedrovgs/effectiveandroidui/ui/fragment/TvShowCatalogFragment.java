@@ -20,7 +20,6 @@ import android.view.View;
 import android.widget.GridView;
 import android.widget.ProgressBar;
 
-import butterknife.BindView;
 import com.github.pedrovgs.effectiveandroidui.R;
 import com.github.pedrovgs.effectiveandroidui.domain.tvshow.TvShow;
 import com.github.pedrovgs.effectiveandroidui.ui.presenter.TvShowCatalogPresenter;
@@ -30,6 +29,8 @@ import com.github.pedrovgs.effectiveandroidui.util.ToastUtils;
 import com.pedrogomez.renderers.RendererAdapter;
 import java.util.Collection;
 import javax.inject.Inject;
+
+import butterknife.InjectView;
 
 /**
  * Fragment created to show a collection of TvShows inside a GridView.
@@ -55,9 +56,9 @@ public class TvShowCatalogFragment extends BaseFragment implements TvShowCatalog
   private RendererAdapter<TvShow> adapter;
   private TvShowCollection tvShows = new TvShowCollection();
 
-  @BindView(R.id.pb_loading) ProgressBar pb_loading;
-  @BindView(R.id.gv_tv_shows) GridView gv_tv_shows;
-  @BindView(R.id.v_empty_case) View v_empty_case;
+  @InjectView(R.id.pb_loading) ProgressBar pb_loading;
+  @InjectView(R.id.gv_tv_shows) GridView gv_tv_shows;
+  @InjectView(R.id.v_empty_case) View v_empty_case;
 
   @Override public void onViewCreated(View view, Bundle savedInstanceState) {
     super.onViewCreated(view, savedInstanceState);
