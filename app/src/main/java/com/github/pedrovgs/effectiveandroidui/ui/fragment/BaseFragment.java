@@ -17,7 +17,7 @@ package com.github.pedrovgs.effectiveandroidui.ui.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,6 +70,6 @@ public abstract class BaseFragment extends Fragment {
    * @param view to extract each widget injected in the fragment.
    */
   private void injectViews(final View view) {
-    ButterKnife.inject(this, view);
+    ButterKnife.bind(this, view);
   }
 }
